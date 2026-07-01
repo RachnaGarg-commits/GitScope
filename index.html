@@ -2,80 +2,219 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GitScope</title>
+    <meta name="color-scheme" content="dark">
+
+    <title>GitScope | GitHub Portfolio Analyzer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
 </head>
 
 <body>
 
-   <nav class="navbar">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
 
-    <div class="logo">
+    <nav class="navbar">
 
-        GitScope
+        <div class="logo">
 
-    </div>
+            <img src="assets/icons/logo.png">
 
-    <ul class="nav-links">
-
-        <li><a href="#">Home</a></li>
-
-        <li><a href="#">Features</a></li>
-
-        <li><a href="#">About</a></li>
-
-    </ul>
-
-</nav>
-
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <h1>
-
-            Analyze Any GitHub Profile
-
-        </h1>
-
-        <p>
-
-            Discover repository insights, language statistics,
-            stars, forks, and developer analytics instantly.
-
-        </p>
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                placeholder="Enter GitHub Username">
-
-            <button>
-
-                Analyze
-
-            </button>
+            <span>GitScope</span>
 
         </div>
 
-    </div>
+        <ul class="nav-links">
 
-</section>
+            <li><a href="#">Home</a></li>
 
-<script src="script.js"></script>
+            <li><a href="#">Features</a></li>
+
+            <li><a href="#">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Analyze Any GitHub Profile
+            </h1>
+
+            <p>
+
+                Discover repository insights, stars, forks,
+                languages and developer analytics instantly.
+
+            </p>
+
+            <div class="search-box">
+
+                <input type="text" 
+                id="usernameInput" 
+                placeholder="Enter GitHub Username">
+
+                <button id="searchBtn">
+
+                    Analyze
+
+                </button>
+
+                <p class="examples-text">
+                    Try:
+                    <span>octocat</span> •
+                    <span>torvalds</span> •
+                    <span>RachnaGarg-commits</span>
+                </p>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+    <section class="profile-section">
+
+        <div id="profileContainer">
+
+        </div>
+
+    </section>
+
+
+    <section class="stats-section">
+
+        <h2>
+
+            Repository Analytics
+
+        </h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3 id="totalRepos">0</h3>
+
+                <p>Repositories</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="totalStars">0</h3>
+
+                <p>Total Stars</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="totalForks">0</h3>
+
+                <p>Total Forks</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="bestRepo">-</h3>
+
+                <p>Top Repository</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="score-section">
+
+        <div class="score-card">
+
+            <h2>Portfolio Score</h2>
+
+            <h1 id="portfolioScore">0</h1>
+
+            <p id="portfolioRemark">
+                Analyze a profile to calculate the score.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="chart-section">
+
+        <div class="chart-card">
+
+            <h2>Language Distribution</h2>
+
+            <canvas id="languageChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <section class="repo-section">
+
+        <div class="repo-controls">
+
+            <input type="text" id="repoSearch" placeholder="Search Repository...">
+
+            <select id="sortRepos">
+
+                <option value="default">Sort By</option>
+
+                <option value="stars">⭐ Stars</option>
+
+                <option value="forks">🍴 Forks</option>
+
+                <option value="updated">📅 Updated</option>
+
+                <option value="name">🔤 Name</option>
+
+            </select>
+
+        </div>
+
+        <div id="loading" class="loading">
+
+            Loading GitHub Data...
+
+        </div>
+
+        <div id="repoContainer"></div>
+
+    </section>
+    <footer>
+
+        Made with ❤️ using GitHub REST API
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
