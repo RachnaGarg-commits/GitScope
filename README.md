@@ -14,14 +14,8 @@ A modern GitHub Portfolio Analyzer that provides repository statistics, portfoli
 
 ## 📸 Preview
 
-> Add screenshots here after uploading them.
-
 ### Home Page
 ![Home](assets/screenshots/home.png)
-
-### Analytics Dashboard
-![Dashboard](assets/screenshots/dashboard.png)
-
 ---
 
 # ✨ Features
