@@ -155,7 +155,7 @@ git push origin feature-name
 **Rachna Garg**
 
 - GitHub: https://github.com/RachnaGarg-commits
-- LinkedIn: https://www.linkedin.com/in/rachnagarg
+- LinkedIn: https://www.linkedin.com/in/rachna-garg-321994363?utm_source=share_via&utm_content=profile&utm_medium=member_android
 
 ---
 
