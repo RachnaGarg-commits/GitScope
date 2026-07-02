@@ -12,11 +12,20 @@ A modern GitHub Portfolio Analyzer that provides repository statistics, portfoli
 
 ---
 
-## 📸 Preview
+## 📸 Screenshots
 
-### Home Page
-![Home](assets/screenshots/home.png)
----
+Project screenshots are available in the repository under:
+
+```text
+assets/screenshots/
+```
+
+This folder contains screenshots of:
+- 🏠 Home Page
+- 👤 GitHub Profile Analysis
+- 📊 Repository Analytics
+- 📈 Language Distribution
+- 🔍 Repository Search
 
 # ✨ Features
 
